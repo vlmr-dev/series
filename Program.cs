@@ -26,7 +26,7 @@ namespace Series
 						AtualizarSerie(); 
 						break;
 					case "5":
-						// Delete: ExcluirSerie 
+						ExcluirSerie(); 
 						break;					
 					case "C":
 						Console.Clear();
@@ -130,7 +130,15 @@ namespace Series
 										descricao: entradaDescricao);
 
 			repositorio.Atualiza(indiceSerie, atualizaSerie);
-		}          
+		}  
+
+        private static void ExcluirSerie()                                                                                   // Delete
+		{
+			Console.Write("Digite o id da série: ");
+			int indiceSerie = int.Parse(Console.ReadLine());
+
+			repositorio.Exclui(indiceSerie);
+		}        
 
         private static string ObterOpcaoSerie()
 		{
