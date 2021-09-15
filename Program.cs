@@ -17,7 +17,7 @@ namespace Series
 						ListarSeries();
 						break;
                                         case "2":
-						// Create: InserirSerie 
+						InserirSerie(); 
 						break;
                                         case "3":
 						// Read: VisualizarSerie 
@@ -61,7 +61,36 @@ namespace Series
                 
 				Console.WriteLine("#ID {0}: - {1} {2}", serie.retornaId(), serie.retornaTitulo(), (excluido ? "*Excluído*" : ""));
 			}
-		}        
+		} 
+
+        private static void InserirSerie()                                                                                      // Create
+		{
+			Console.WriteLine("Inserir nova série");
+
+			foreach (int i in Enum.GetValues(typeof(Genero)))
+			{
+				Console.WriteLine("{0}-{1}", i, Enum.GetName(typeof(Genero), i));
+			}
+			Console.Write("Digite o gênero entre as opções acima: ");
+			int entradaGenero = int.Parse(Console.ReadLine());
+
+			Console.Write("Digite o título da série: ");
+			string entradaTitulo = Console.ReadLine();
+
+			Console.Write("Digite o ano de início da série: ");
+			int entradaAno = int.Parse(Console.ReadLine());
+
+			Console.Write("Digite a descrição da série: ");
+			string entradaDescricao = Console.ReadLine();
+
+			Serie novaSerie = new Serie(id: repositorio.ProximoId(),
+										genero: (Genero)entradaGenero,
+										titulo: entradaTitulo,
+										ano: entradaAno,
+										descricao: entradaDescricao);
+
+			repositorio.Insere(novaSerie);
+		}            
 
         private static string ObterOpcaoSerie()
 		{
