@@ -20,7 +20,7 @@ namespace Series
 						InserirSerie(); 
 						break;
                                         case "3":
-						// Read: VisualizarSerie 
+						VisualizarSerie(); 
 						break;					
 					case "4":
 						// Update: AtualizarSerie 
@@ -90,7 +90,17 @@ namespace Series
 										descricao: entradaDescricao);
 
 			repositorio.Insere(novaSerie);
-		}            
+		} 
+
+        private static void VisualizarSerie()                                                                                   // Read
+		{
+			Console.Write("Digite o id da série: ");
+			int indiceSerie = int.Parse(Console.ReadLine());
+
+			var serie = repositorio.RetornaPorId(indiceSerie);
+
+			Console.WriteLine(serie);
+		}          
 
         private static string ObterOpcaoSerie()
 		{
