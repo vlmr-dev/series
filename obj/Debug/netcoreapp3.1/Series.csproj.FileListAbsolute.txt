@@ -1,0 +1,13 @@
+D:\Projetos\VSCode\Projects\Series\bin\Debug\netcoreapp3.1\Series.exe
+D:\Projetos\VSCode\Projects\Series\bin\Debug\netcoreapp3.1\Series.deps.json
+D:\Projetos\VSCode\Projects\Series\bin\Debug\netcoreapp3.1\Series.runtimeconfig.json
+D:\Projetos\VSCode\Projects\Series\bin\Debug\netcoreapp3.1\Series.runtimeconfig.dev.json
+D:\Projetos\VSCode\Projects\Series\bin\Debug\netcoreapp3.1\Series.dll
+D:\Projetos\VSCode\Projects\Series\bin\Debug\netcoreapp3.1\Series.pdb
+D:\Projetos\VSCode\Projects\Series\obj\Debug\netcoreapp3.1\Series.csprojAssemblyReference.cache
+D:\Projetos\VSCode\Projects\Series\obj\Debug\netcoreapp3.1\Series.AssemblyInfoInputs.cache
+D:\Projetos\VSCode\Projects\Series\obj\Debug\netcoreapp3.1\Series.AssemblyInfo.cs
+D:\Projetos\VSCode\Projects\Series\obj\Debug\netcoreapp3.1\Series.csproj.CoreCompileInputs.cache
+D:\Projetos\VSCode\Projects\Series\obj\Debug\netcoreapp3.1\Series.dll
+D:\Projetos\VSCode\Projects\Series\obj\Debug\netcoreapp3.1\Series.pdb
+D:\Projetos\VSCode\Projects\Series\obj\Debug\netcoreapp3.1\Series.genruntimeconfig.cache
