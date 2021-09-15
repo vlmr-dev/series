@@ -23,7 +23,7 @@ namespace Series
 						VisualizarSerie(); 
 						break;					
 					case "4":
-						// Update: AtualizarSerie 
+						AtualizarSerie(); 
 						break;
 					case "5":
 						// Delete: ExcluirSerie 
@@ -100,6 +100,36 @@ namespace Series
 			var serie = repositorio.RetornaPorId(indiceSerie);
 
 			Console.WriteLine(serie);
+		}
+
+        private static void AtualizarSerie()                                                                                    // Update
+		{
+			Console.Write("Digite o id da série: ");
+			int indiceSerie = int.Parse(Console.ReadLine());
+
+			foreach (int i in Enum.GetValues(typeof(Genero)))
+			{
+				Console.WriteLine("{0}-{1}", i, Enum.GetName(typeof(Genero), i));
+			}
+			Console.Write("Digite o gênero entre as opções acima: ");
+			int entradaGenero = int.Parse(Console.ReadLine());
+
+			Console.Write("Digite o título da série: ");
+			string entradaTitulo = Console.ReadLine();
+
+			Console.Write("Digite o ano de início da série: ");
+			int entradaAno = int.Parse(Console.ReadLine());
+
+			Console.Write("Digite a descrição da série: ");
+			string entradaDescricao = Console.ReadLine();
+
+			Serie atualizaSerie = new Serie(id: indiceSerie,
+										genero: (Genero)entradaGenero,
+										titulo: entradaTitulo,
+										ano: entradaAno,
+										descricao: entradaDescricao);
+
+			repositorio.Atualiza(indiceSerie, atualizaSerie);
 		}          
 
         private static string ObterOpcaoSerie()
